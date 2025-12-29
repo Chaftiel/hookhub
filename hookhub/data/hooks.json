@@ -1,0 +1,154 @@
+{
+  "hooks": [
+    {
+      "id": "1",
+      "name": "Acquia Cloud Hooks",
+      "category": "Deployment",
+      "description": "Automate Drupal deployments with database updates, cache clearing, and environment-specific configurations on Acquia Cloud platform.",
+      "repoUrl": "https://github.com/acquia/cloud-hooks",
+      "stars": 245,
+      "language": "Shell",
+      "lastUpdated": "2024-11-15"
+    },
+    {
+      "id": "2",
+      "name": "Terraform Cloud GitHub Action",
+      "category": "Infrastructure",
+      "description": "Automate infrastructure validation and compliance checks on every pull request using Terraform Cloud integration.",
+      "repoUrl": "https://github.com/hashicorp/setup-terraform",
+      "stars": 1280,
+      "language": "TypeScript",
+      "lastUpdated": "2024-12-20"
+    },
+    {
+      "id": "3",
+      "name": "GitHub Actions Webhook Proxy",
+      "category": "CI/CD",
+      "description": "Proxy webhooks from GitHub to internal services behind firewalls. Perfect for self-hosted runners and secure environments.",
+      "repoUrl": "https://github.com/distributhor/workflow-webhook",
+      "stars": 542,
+      "language": "JavaScript",
+      "lastUpdated": "2024-12-10"
+    },
+    {
+      "id": "4",
+      "name": "Kubernetes Admission Webhooks",
+      "category": "Security",
+      "description": "Validate and mutate Kubernetes resources before they're persisted. Enforce policies and inject sidecar containers automatically.",
+      "repoUrl": "https://github.com/kubernetes/kubernetes/tree/master/test/images/webhook",
+      "stars": 8920,
+      "language": "Go",
+      "lastUpdated": "2024-12-22"
+    },
+    {
+      "id": "5",
+      "name": "Database Migration Hook",
+      "category": "Database",
+      "description": "Automatically run database migrations on deployment. Supports PostgreSQL, MySQL, and MongoDB with rollback capabilities.",
+      "repoUrl": "https://github.com/golang-migrate/migrate",
+      "stars": 14200,
+      "language": "Go",
+      "lastUpdated": "2024-12-18"
+    },
+    {
+      "id": "6",
+      "name": "Slack Deployment Notifier",
+      "category": "Notifications",
+      "description": "Send rich Slack notifications on deployment events. Includes success/failure status, deployment duration, and commit details.",
+      "repoUrl": "https://github.com/8398a7/action-slack",
+      "stars": 1850,
+      "language": "TypeScript",
+      "lastUpdated": "2024-11-28"
+    },
+    {
+      "id": "7",
+      "name": "Pre-commit Security Scan",
+      "category": "Security",
+      "description": "Scan code for secrets, vulnerabilities, and security issues before commits. Integrates with popular secret detection tools.",
+      "repoUrl": "https://github.com/pre-commit/pre-commit-hooks",
+      "stars": 5100,
+      "language": "Python",
+      "lastUpdated": "2024-12-15"
+    },
+    {
+      "id": "8",
+      "name": "Datadog CI Visibility",
+      "category": "Monitoring",
+      "description": "Track CI/CD pipeline performance and test results in Datadog. Identify bottlenecks and optimize build times.",
+      "repoUrl": "https://github.com/DataDog/datadog-ci",
+      "stars": 312,
+      "language": "TypeScript",
+      "lastUpdated": "2024-12-21"
+    },
+    {
+      "id": "9",
+      "name": "Playwright Test Reporter Webhook",
+      "category": "Testing",
+      "description": "Send Playwright test results to custom endpoints. Generate detailed HTML reports and notify teams of test failures.",
+      "repoUrl": "https://github.com/microsoft/playwright",
+      "stars": 65400,
+      "language": "TypeScript",
+      "lastUpdated": "2024-12-27"
+    },
+    {
+      "id": "10",
+      "name": "AWS Lambda Deploy Hook",
+      "category": "Deployment",
+      "description": "Deploy AWS Lambda functions automatically on git push. Supports environment variables, layers, and blue-green deployments.",
+      "repoUrl": "https://github.com/serverless/serverless",
+      "stars": 46300,
+      "language": "JavaScript",
+      "lastUpdated": "2024-12-26"
+    },
+    {
+      "id": "11",
+      "name": "Jenkins Pipeline Webhook",
+      "category": "CI/CD",
+      "description": "Trigger Jenkins pipelines via webhooks with dynamic parameters. Supports GitHub, GitLab, and Bitbucket integrations.",
+      "repoUrl": "https://github.com/jenkinsci/generic-webhook-trigger-plugin",
+      "stars": 780,
+      "language": "Java",
+      "lastUpdated": "2024-12-05"
+    },
+    {
+      "id": "12",
+      "name": "Sentry Release Tracking",
+      "category": "Monitoring",
+      "description": "Automatically create Sentry releases on deployment. Track errors by release version and associate commits with issues.",
+      "repoUrl": "https://github.com/getsentry/sentry-cli",
+      "stars": 890,
+      "language": "Rust",
+      "lastUpdated": "2024-12-19"
+    },
+    {
+      "id": "13",
+      "name": "Docker Build and Push Hook",
+      "category": "Infrastructure",
+      "description": "Build Docker images and push to registries on code changes. Multi-platform builds with caching support.",
+      "repoUrl": "https://github.com/docker/build-push-action",
+      "stars": 4200,
+      "language": "TypeScript",
+      "lastUpdated": "2024-12-23"
+    },
+    {
+      "id": "14",
+      "name": "E2E Test Automation Hook",
+      "category": "Testing",
+      "description": "Run end-to-end tests automatically on pull requests. Supports Cypress, Selenium, and Puppeteer frameworks.",
+      "repoUrl": "https://github.com/cypress-io/github-action",
+      "stars": 1520,
+      "language": "JavaScript",
+      "lastUpdated": "2024-12-14"
+    },
+    {
+      "id": "15",
+      "name": "Email Notification Hook",
+      "category": "Notifications",
+      "description": "Send customizable email notifications on build events. HTML templates, attachments, and multiple recipient support.",
+      "repoUrl": "https://github.com/dawidd6/action-send-mail",
+      "stars": 720,
+      "language": "JavaScript",
+      "lastUpdated": "2024-11-30"
+    }
+  ]
+}

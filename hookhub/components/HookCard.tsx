@@ -37,66 +37,72 @@ export default function HookCard({ hook }: HookCardProps) {
   };
 
   return (
-    <div className="group relative flex flex-col rounded-lg border border-zinc-200 bg-white p-6 shadow-sm transition-all hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950">
-      {/* Category Badge */}
-      <div className="mb-3">
+    <div className="group relative flex flex-col overflow-hidden rounded-xl border border-zinc-200/60 bg-white transition-all hover:border-zinc-300 hover:shadow-lg hover:shadow-zinc-200/50 dark:border-zinc-800/60 dark:bg-zinc-900/50 dark:hover:border-zinc-700 dark:hover:shadow-zinc-900/50">
+      {/* Content Container */}
+      <div className="flex flex-col p-6">
+        {/* Header: Category Badge */}
         <span
-          className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
+          className={`mb-4 w-fit rounded-full px-3 py-1 text-xs font-medium transition-transform group-hover:scale-105 ${
             categoryColors[hook.category] || "bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-300"
           }`}
         >
           {hook.category}
         </span>
-      </div>
 
-      {/* Hook Name */}
-      <h3 className="mb-2 text-xl font-semibold text-zinc-950 dark:text-zinc-50">
-        {hook.name}
-      </h3>
+        {/* Hook Name */}
+        <h3 className="mb-3 text-2xl font-bold tracking-tight text-zinc-900 transition-colors group-hover:text-zinc-700 dark:text-zinc-50 dark:group-hover:text-zinc-200">
+          {hook.name}
+        </h3>
 
-      {/* Description */}
-      <p className="mb-4 flex-grow text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-        {hook.description}
-      </p>
+        {/* Description */}
+        <p className="mb-6 flex-grow text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+          {hook.description}
+        </p>
 
-      {/* GitHub Link */}
-      <a
-        href={hook.repoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mb-4 inline-flex items-center gap-2 rounded-md bg-zinc-950 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800 dark:bg-zinc-50 dark:text-zinc-950 dark:hover:bg-zinc-200"
-      >
-        View on GitHub
-        <svg
-          className="h-4 w-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+        {/* Metadata */}
+        <div className="mb-5 flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-500">
+          {hook.stars && (
+            <div className="flex items-center gap-1.5">
+              <svg
+                className="h-3.5 w-3.5 fill-yellow-500 dark:fill-yellow-400"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              <span className="font-medium">{formatStars(hook.stars)}</span>
+            </div>
+          )}
+          {hook.language && (
+            <div className="flex items-center gap-1.5">
+              <div className="h-2 w-2 rounded-full bg-zinc-400 dark:bg-zinc-600" />
+              <span>{hook.language}</span>
+            </div>
+          )}
+          {hook.lastUpdated && <span>{formatDate(hook.lastUpdated)}</span>}
+        </div>
+
+        {/* GitHub Link */}
+        <a
+          href={hook.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/link inline-flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-900 px-4 py-2.5 text-sm font-semibold text-white transition-all hover:bg-zinc-800 active:scale-[0.98] dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-50"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-          />
-        </svg>
-      </a>
-
-      {/* Metadata */}
-      <div className="flex items-center gap-4 text-xs text-zinc-500 dark:text-zinc-500">
-        {hook.stars && (
-          <div className="flex items-center gap-1">
-            <svg
-              className="h-4 w-4 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-            </svg>
-            <span>{formatStars(hook.stars)}</span>
-          </div>
-        )}
-        {hook.language && <span>{hook.language}</span>}
-        {hook.lastUpdated && <span>{formatDate(hook.lastUpdated)}</span>}
+          View on GitHub
+          <svg
+            className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        </a>
       </div>
     </div>
   );
